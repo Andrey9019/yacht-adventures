@@ -37,7 +37,6 @@ const Button = ({
   );
 };
 
-// Додавання PropTypes для перевірки типів
 Button.propTypes = {
   text: PropTypes.string.isRequired,
   textColor: PropTypes.string,
