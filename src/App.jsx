@@ -1,11 +1,17 @@
+import Header from "./components/Header/Header";
+import MainPage from "./components/MainPage";
+import Footer from "./components/Footer/Footer";
+
 import "./index.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="bg-blue-500 text-white p-4">
-      <p className="text-6xl">Hello, Tailwind!</p>
-    </div>
+    <>
+      <Header />
+      <MainPage />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
