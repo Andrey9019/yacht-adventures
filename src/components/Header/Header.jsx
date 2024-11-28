@@ -256,7 +256,7 @@ const Header = () => {
           )}
         </>
       )}
-      <div className="absolute bottom-0 left-4 right-4 h-[1px] bg-[#f6f5ef33]"></div>
+      {/* <div className="absolute bottom-0 left-4 right-4 h-[1px] bg-[#f6f5ef33]"></div> */}
     </header>
   );
 };

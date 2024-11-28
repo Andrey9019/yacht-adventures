@@ -96,14 +96,32 @@ button {
     max-width: 100%;
   }
 } */
+.hero-bg-img {
+  background: linear-gradient(
+      359deg,
+      rgba(17, 19, 31, 0.9) 42.62%,
+      rgba(17, 19, 31, 0.31) 84.12%,
+      rgba(17, 19, 31, 0) 100%
+    ),
+    url(images/hero-card/Image.webp) lightgray -363.632px -322.699px / 294.966%
+      170.401% no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -80px;
+}
+@media (min-width: 768px) {
+  .hero-bg-img {
+    margin-top: -100px;
+  }
+}
 
 .hero-container {
-  padding: 40px 20px 0px;
+  padding: 260px 20px 240px;
   margin: 0;
 }
 @media (min-width: 768px) {
   .hero-container {
-    padding: 64px 32px 0px;
+    padding: 280px 32px 180px;
   }
 }
 .hero-background {
@@ -124,6 +142,20 @@ button {
   }
 }
 
+.about-container {
+  padding: 0px 20px 0px;
+  margin-top: -40px;
+}
+@media (min-width: 768px) {
+  .about-container {
+    padding: 0px 32px 0px;
+  }
+}
+@media (min-width: 1280px) {
+  .about-container {
+    padding: 0px 32px 0px;
+  }
+}
 .list-container {
   margin: 0 auto;
 }
