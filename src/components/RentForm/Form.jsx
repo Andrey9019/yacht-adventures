@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../ui/Button";
-
+import { FaArrowRight } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 const Form = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -52,7 +53,6 @@ const Form = () => {
 
   return (
     <div className="flex flex-col w-full max-w-[378px] ">
-      {/* Поля форми */}
       <label className="text-sm md:text-base">Full Name</label>
       <input
         type="text"
@@ -88,58 +88,15 @@ const Form = () => {
         className="bg-transparent border-b border-white outline-none p-[2px] mb-6 md:mb-8  h-14 focus:border-gray-500"
         placeholder="Wishes for the order"
       />
-      <Button
-        text="Send"
-        onClick={handleSubmit}
-        icon={
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="9"
-            viewBox="0 0 18 9"
-            fill="none"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M12.5 0.169922L18 4.50005L12.5 8.83018V5.25005L0 5.25005L0 3.75005L12.5 3.75005V0.169922Z"
-              fill="#F6F5EF"
-            />
-          </svg>
-        }
-      />
-      {/* Модальне вікно */}
+      <Button text="Send" onClick={handleSubmit} icon={<FaArrowRight />} />
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="relative w-[335px] md:w-[570px] bg-[--dark-blue-2] py-10 px-6 md:p-16 rounded-[20px]">
-            {/* Кнопка закриття */}
             <button
-              onClick={closeModal} // функція закриття модального вікна
+              onClick={closeModal}
               className="absolute top-[14px] right-[14px] md:top-[32px] md:right-[32px]"
             >
-              <svg
-                className="md:w-[24px] md:h-[24px]"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M18 6L6 18"
-                  stroke="#F6F5EF"
-                  strokeWidth="1.3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M6 6L18 18"
-                  stroke="#F6F5EF"
-                  strokeWidth="1.3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <IoMdClose />
             </button>
 
             <img

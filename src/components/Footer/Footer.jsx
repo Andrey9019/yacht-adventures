@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaSailboat } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -10,45 +11,7 @@ const Footer = () => {
       <div className="mb-10 md:mb-[100px] xl:mb-[132px]">
         <div className=" pt-10 md:pt-[60px] flex flex-col md:flex-row justify-between items-start gap-10 ">
           <div className="flex items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width=""
-              height=""
-              viewBox="0 0 18 18"
-              fill="none"
-              className="w-[18px] md:w-6"
-            >
-              <mask
-                id="mask0_3500_65"
-                style={{ maskType: "alpha" }}
-                maskUnits="userSpaceOnUse"
-                x="0"
-                y="0"
-                width="18"
-                height="18"
-              >
-                <path
-                  d="M0 14.412L4.0605 18H15.972L17.6775 15.6038L0.0015 14.412H0ZM10.4887 0V14.3048L15.9705 14.682L10.4887 0ZM9.74175 2.4105L1.82175 13.6807L9.74175 14.2155V2.4105Z"
-                  fill="black"
-                />
-              </mask>
-              <g mask="url(#mask0_3500_65)">
-                <path d="M0 0H18V18H0V0Z" fill="url(#paint0_linear_3500_65)" />
-              </g>
-              <defs>
-                <linearGradient
-                  id="paint0_linear_3500_65"
-                  x1="7.66484"
-                  y1="2.72868e-06"
-                  x2="16.8581"
-                  y2="0.347733"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#BEC7C2" />
-                  <stop offset="1" stopColor="#A1B5BA" />
-                </linearGradient>
-              </defs>
-            </svg>
+            <FaSailboat className="w-[18px] md:w-6" />
             <span className="text-sm font-medium uppercase md:font-bold md:text-xl">
               Yacht Adventures
             </span>

@@ -1,3 +1,5 @@
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 import { useEffect, useState } from "react";
 import ItemYacht from "./ItemYacht";
 import allYachts from "../data/yachtsData";
@@ -47,20 +49,7 @@ const ListYacht = () => {
             className="disabled:opacity-50 max-xl:hidden"
           >
             <div className="border border-white rounded-[60px] p-[14px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="8"
-                viewBox="0 0 18 8"
-                fill="none"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M5.5 0L0 4L5.5 8V4.69282L18 4.69282V3.30718L5.5 3.30718V0Z"
-                  fill="#F6F5EF"
-                />
-              </svg>
+              <FaArrowLeft />
             </div>
           </button>
 
@@ -75,20 +64,7 @@ const ListYacht = () => {
             className=" disabled:opacity-50 max-xl:hidden"
           >
             <div className="border border-white rounded-[60px] p-[14px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="8"
-                viewBox="0 0 18 8"
-                fill="none"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M12.5 0L18 4L12.5 8V4.69282L0 4.69282L0 3.30718L12.5 3.30718V0Z"
-                  fill="#F6F5EF"
-                />
-              </svg>
+              <FaArrowRight />
             </div>
           </button>
         </div>
@@ -99,20 +75,7 @@ const ListYacht = () => {
             className="disabled:opacity-50"
           >
             <div className="border border-white rounded-[60px] p-[14px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="8"
-                viewBox="0 0 18 8"
-                fill="none"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M5.5 0L0 4L5.5 8V4.69282L18 4.69282V3.30718L5.5 3.30718V0Z"
-                  fill="#F6F5EF"
-                />
-              </svg>
+              <FaArrowLeft />
             </div>
           </button>
           <button
@@ -121,20 +84,7 @@ const ListYacht = () => {
             className=" disabled:opacity-50"
           >
             <div className="border border-white rounded-[60px] p-[14px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="8"
-                viewBox="0 0 18 8"
-                fill="none"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M12.5 0L18 4L12.5 8V4.69282L0 4.69282L0 3.30718L12.5 3.30718V0Z"
-                  fill="#F6F5EF"
-                />
-              </svg>
+              <FaArrowRight />
             </div>
           </button>
         </div>

@@ -22,10 +22,6 @@ body {
   color: var(--white, #f6f5ef);
 }
 
-/* code {
-  font-family: "DM Sans", sans-serif;
-} */
-
 * {
   margin: 0;
   padding: 0;
@@ -79,23 +75,6 @@ button {
   }
 }
 
-/* @media (max-width: 1200px) {
-  .container {
-    max-width: 1000px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .container {
-    max-width: 800px;
-  }
-}
-
-@media (max-width: 800px) {
-  .container {
-    max-width: 100%;
-  }
-} */
 .hero-bg-img {
   background: linear-gradient(
       359deg,
@@ -290,4 +269,16 @@ button {
     /* grid-row-start: 2;
     grid-row-end: 5; */
   }
+}
+.swiper-pagination {
+  position: static;
+}
+.swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  background: var(--dark-blue-2);
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: var(--prime-dark);
 }

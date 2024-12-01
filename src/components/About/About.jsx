@@ -6,7 +6,7 @@ const About = () => {
       id="About"
       className="flex mx-auto mb-40 md:mb-[370px] xl:mb-[494px]"
     >
-      <div className="container about-container ">
+      <div className="container about-container">
         <div className="grid gap-[14px] text-sm xl:text-base mb-10 md:mb-16 grid-cols-2 md:grid-cols-4 xl:grid-cols-6">
           <p className="col-span-2 row-start-1 md:col-span-3 md:row-start-1 xl:col-span-3 xl:row-start-1 text-2xl md:text-[32px] mb-10">
             <span className="italic text-[--prime-phrase]">

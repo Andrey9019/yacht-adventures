@@ -1,4 +1,4 @@
-import CommentsCarousel from "./CommentsCarousel";
+import CommentsSwiper from "./CommentsSwiper";
 
 const Comments = () => {
   return (
@@ -18,7 +18,7 @@ const Comments = () => {
             have to say about their journey with us.
           </p>
         </div>
-        <CommentsCarousel />
+        <CommentsSwiper />
       </div>
     </section>
   );
