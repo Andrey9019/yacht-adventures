@@ -1,6 +1,7 @@
-import allComments from "../data/commentsData";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
+
+import allComments from "../data/commentsData";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,7 +10,7 @@ const CommentsSwiper = () => {
   return (
     <Swiper
       className="mx-auto" // Центрування слайдера
-      modules={[Pagination]}
+      modules={[Pagination, Navigation]}
       spaceBetween={16}
       slidesPerView={1}
       pagination={{ clickable: true }}

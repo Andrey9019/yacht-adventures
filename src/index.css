@@ -282,3 +282,8 @@ button {
 .swiper-pagination-bullet-active {
   background: var(--prime-dark);
 }
+
+.swiper-button-disabled {
+  border-color: gray;
+  color: gray;
+}

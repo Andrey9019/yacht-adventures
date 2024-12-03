@@ -13,7 +13,7 @@ const ItemList = ({ yachtContent }) => {
   } = yachtContent;
 
   return (
-    <li className="bg-[--dark-blue-2] p-[18px] pb-6 rounded-3xl mb-6 md:mb-8 xl:mb-0 w-[335px] h-[469px] md:w-[344px] md:h-[508px] xl:w-[354px]">
+    <div className="bg-[--dark-blue-2] p-[18px] pb-6 rounded-3xl mb-6 md:mb-8 xl:mb-0 w-[335px] h-[469px] md:w-[344px] md:h-[508px] xl:w-[354px]">
       <img
         src={imageYacht.mobileSrc}
         srcSet={`${imageYacht.mobileSrc} 500w, ${imageYacht.desktopSrc} 1000w`}
@@ -70,7 +70,7 @@ const ItemList = ({ yachtContent }) => {
           )}
         </tbody>
       </table>
-    </li>
+    </div>
   );
 };
 
