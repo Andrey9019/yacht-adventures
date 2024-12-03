@@ -1,94 +1,112 @@
 import { useState } from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 import Button from "../ui/Button";
 import { FaArrowRight } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
-const Form = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    comment: "",
-  });
+
+const initialValues = {
+  fullName: "",
+  email: "",
+  phone: "",
+  comment: "",
+};
+
+const validationSchema = Yup.object({
+  fullName: Yup.string().required("Full Name is required"),
+  email: Yup.string()
+    .email("Invalid email format")
+    .required("Email is required"),
+  phone: Yup.string()
+    .matches(/^[0-9]{10,15}$/, "Invalid phone number")
+    .required("Phone Number is required"),
+  comment: Yup.string(),
+});
+
+const FormikForm = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = () => {
-    const validationError = validateForm();
-    if (validationError) {
-      alert(validationError);
-      return;
-    }
-
-    setTimeout(() => {
-      setShowModal(true);
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        comment: "",
-      });
-    }, 1000);
-  };
-
-  const validateForm = () => {
-    const { fullName, email, phone } = formData;
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phonePattern = /^[0-9]{10,15}$/;
-
-    if (!fullName) return "Full Name is required";
-    if (!emailPattern.test(email)) return "Invalid email format";
-    if (!phonePattern.test(phone)) return "Invalid phone number";
-
-    return null;
+  const handleSubmit = (values, { resetForm }) => {
+    setShowModal(true);
+    resetForm();
   };
 
   const closeModal = () => setShowModal(false);
 
   return (
-    <div className="flex flex-col w-full max-w-[378px] ">
-      <label className="text-sm md:text-base">Full Name</label>
-      <input
-        type="text"
-        name="fullName"
-        value={formData.fullName}
-        onChange={handleChange}
-        className="bg-transparent border-b border-[--white] mb-6 md:mb-7 p-[2px]  focus:border-gray-500"
-        placeholder="Andrey Zirchenko"
-      />
-      <label className="text-sm md:text-base">Email</label>
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        className="bg-transparent border-b border-[--white] mb-6 md:mb-7 p-[2px]  focus:border-gray-500"
-        placeholder="example@ukr.net"
-      />
-      <label className="text-sm md:text-base">Phone Number</label>
-      <input
-        type="tel"
-        name="phone"
-        value={formData.phone}
-        onChange={handleChange}
-        className="bg-transparent border-b border-[--white] mb-6 md:mb-7  p-[2px]  focus:border-gray-500"
-        placeholder="0961234567"
-      />
-      <label className="text-sm md:text-base">Comment</label>
-      <textarea
-        name="comment"
-        value={formData.comment}
-        onChange={handleChange}
-        className="bg-transparent border-b border-white outline-none p-[2px] mb-6 md:mb-8  h-14 focus:border-gray-500"
-        placeholder="Wishes for the order"
-      />
-      <Button text="Send" onClick={handleSubmit} icon={<FaArrowRight />} />
+    <div className="flex flex-col w-full max-w-[378px]">
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        {() => (
+          <Form>
+            <div className="flex flex-col">
+              <div className="flex flex-row">
+                <label className="text-sm md:text-base">Full Name</label>
+                <ErrorMessage
+                  name="fullName"
+                  component="div"
+                  className="ml-3 text-red-500 text-sm md:text-base"
+                />
+              </div>
+              <Field
+                type="text"
+                name="fullName"
+                className="bg-transparent border-b border-[--white] mb-6 md:mb-7 p-[2px] focus:border-gray-500"
+                placeholder="Andrey Zirchenko"
+              />
+            </div>
+
+            <div className="flex flex-col">
+              <div className="flex flex-row">
+                <label className="text-sm md:text-base">Email</label>
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className="ml-3 text-red-500 text-sm md:text-base"
+                />
+              </div>
+              <Field
+                type="email"
+                name="email"
+                className="bg-transparent border-b border-[--white] mb-6 md:mb-7 p-[2px] focus:border-gray-500"
+                placeholder="example@ukr.net"
+              />
+            </div>
+            <div className="flex flex-col">
+              <div className="flex flex-row">
+                <label className="text-sm md:text-base">Phone Number</label>
+                <ErrorMessage
+                  name="phone"
+                  component="div"
+                  className="ml-3 text-red-500 text-sm md:text-base"
+                />
+              </div>
+              <Field
+                type="tel"
+                name="phone"
+                className="bg-transparent border-b border-[--white] mb-6 md:mb-7 p-[2px] focus:border-gray-500"
+                placeholder="0961234567"
+              />
+            </div>
+
+            <div className="flex flex-col">
+              <label className="text-sm md:text-base">Comment</label>
+              <Field
+                as="textarea"
+                name="comment"
+                className="bg-transparent border-b border-white outline-none p-[2px] mb-6 md:mb-8 h-14 focus:border-gray-500"
+                placeholder="Wishes for the order"
+              />
+            </div>
+
+            <Button text="Send" type="submit" icon={<FaArrowRight />} />
+          </Form>
+        )}
+      </Formik>
+
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="relative w-[335px] md:w-[570px] bg-[--dark-blue-2] py-10 px-6 md:p-16 rounded-[20px]">
@@ -124,4 +142,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormikForm;

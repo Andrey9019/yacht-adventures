@@ -5,8 +5,6 @@ import allYachts from "../data/yachtsData";
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-// import ItemYacht from "./ItemYacht";
-
 const ListYacht = () => {
   return (
     <>
