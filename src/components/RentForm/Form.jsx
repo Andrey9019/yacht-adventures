@@ -102,7 +102,12 @@ const FormikForm = () => {
               />
             </div>
 
-            <Button text="Send" type="submit" icon={<FaArrowRight />} />
+            <Button
+              text="Send"
+              type="submit"
+              icon={<FaArrowRight />}
+              onClick={() => {}}
+            />
           </Form>
         )}
       </Formik>
