@@ -7,11 +7,9 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const ListYacht = () => {
   return (
-    <>
+    <section id="Yachts" className="container">
       <Swiper
-        className="max-w-[1280px]"
         modules={[Navigation]}
-        // spaceBetween={50}
         slidesPerView={1}
         navigation={{
           nextEl: ".swiper-button-next",
@@ -19,12 +17,10 @@ const ListYacht = () => {
         }}
         breakpoints={{
           768: {
-            // spaceBetween: 16,
             slidesPerView: 2,
           },
           1280: {
             slidesPerView: 3,
-            // spaceBetween: 32,
           },
         }}
       >
@@ -91,7 +87,7 @@ const ListYacht = () => {
           </SwiperSlide>
         ))}
 
-        <div className="flex justify-center gap-[14px] ">
+        <div className="flex justify-center gap-[14px]">
           <div className="swiper-button-prev border border-white rounded-[60px] px-[16px] py-[8px]">
             <FaArrowLeft />
           </div>
@@ -100,7 +96,7 @@ const ListYacht = () => {
           </div>
         </div>
       </Swiper>
-    </>
+    </section>
   );
 };
 

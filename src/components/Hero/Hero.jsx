@@ -2,7 +2,7 @@ import Button from "../ui/Button";
 
 const Hero = () => {
   return (
-    <section className="hero-bg-img   container flex mx-auto">
+    <section className="hero-bg-img container flex mx-auto">
       <div className=" hero-container xl:flex flex-row-reverse">
         <div className=" flex flex-col items-center text-center">
           <h1 className="text-3xl md:text-6xl font-medium tracking-[-0.6px] md:tracking-[-0.64px] xl:tracking-[-1.7px] mb-6 md:mb-4">

@@ -36,11 +36,8 @@ const About = () => {
                 src="images/about/about-1@1x.jpg"
                 srcSet="images/about/about-1@1x.jpg 1x, images/about/about-1@2x.webp 2x"
                 alt="Yacht's view"
-                className="h-[524px] md:h-[630px] xl:h-[473px] xl:w-[533px] object-cover rounded-3xl  "
-                // loading="lazy" // відкладене завантаження
-                // decoding="async" // асинхронне декодування
-                // width="500" // встановлення ширини для покращення продуктивності
-                // height="250" // встановлення висоти
+                className="h-[524px] md:h-[630px] xl:h-[473px] xl:w-[533px] object-cover rounded-3xl"
+                loading="lazy"
               />
             </div>
             <div className=" about-box2 md:w-[308px]">
@@ -48,28 +45,22 @@ const About = () => {
                 src="images/about/about-2@1x.jpg"
                 srcSet="images/about/about-2@1x.jpg 1x, images/about/about-2@2x.webp 2x"
                 alt="Yacht's view"
-                className="h-[289px] md:w-[308px] scale-x-[-1] object-cover rounded-3xl "
-                loading="lazy" // відкладене завантаження
-                decoding="async" // асинхронне декодування
-                // width="500" // встановлення ширини для покращення продуктивності
-                // height="250" // встановлення висоти
+                className="h-[289px] md:w-[308px] scale-x-[-1] object-cover rounded-3xl"
+                loading="lazy"
               />
             </div>
-            <div className="image-container about-box3 w-[260px] ">
+            <div className="image-container about-box3 w-[260px]">
               <img
                 src="images/about/about-3@1x.jpg"
                 srcSet="images/about/about-3@1x.jpg 1x, images/about/about-3@2x.webp 2x"
                 alt="Yacht's view"
                 className="h-[244px] w-[260px] object-cover rounded-3xl"
-                loading="lazy" // відкладене завантаження
-                decoding="async" // асинхронне декодування
-                // width="500" // встановлення ширини для покращення продуктивності
-                // height="250" // встановлення висоти
+                loading="lazy"
               />
             </div>
           </div>
-          <div className="absolute -bottom-24 md:-bottom-64 md:px-8 xl:-bottom-96  xl:px-24">
-            <p className="mb-10 md:mb-16 text-[36px] md:text-[70px] xl:text-[100px] xl:font-medium ">
+          <div className="absolute -bottom-24 md:-bottom-64 md:px-8 xl:-bottom-96 xl:px-24">
+            <p className="mb-10 md:mb-16 text-[36px] md:text-[70px] xl:text-[100px] xl:font-medium">
               Choose your dream yacht and sail away into the sunset
             </p>
             <Button

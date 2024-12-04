@@ -8,7 +8,6 @@
   --dark-blue: #11131f; /* Колір фону та колір тексту*/
   --dark-blue-2: #1f212d; /* фон картки */
   --prime-dark: #93abae;
-  --prime-light: ;
   --prime-phrase: #a1b5ba;
 }
 
@@ -62,8 +61,8 @@ button {
 }
 .container {
   width: 100%;
-  max-width: 1280px; /* Максимальна ширина контейнера */
-  margin: 0 auto; /* Центрує контейнер */
+  max-width: 1280px; /* 1440px */
+  margin: 0 auto;
 }
 .footer {
   padding: 0px 20px 14px 20px;
@@ -103,10 +102,7 @@ button {
     padding: 280px 32px 180px;
   }
 }
-.hero-background {
-  background: linear-gradient(92deg, #bec7c2 41.03%, #a1b5ba 90.31%);
-  border-radius: 24px;
-}
+
 .custom-container {
   padding: 80px 20px 0px;
 }
@@ -154,6 +150,9 @@ button {
   inset: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #11131f 100%);
 }
+
+/* Grid */
+
 .about-wrap {
   display: flex;
   gap: 24px;
@@ -250,26 +249,19 @@ button {
     grid-column-start: 1;
     grid-column-end: 3;
     margin-right: -116px;
-
-    /* grid-row-start: 1;
-    grid-row-end: 2; */
   }
   .activ-box2 {
     grid-column-start: 4;
-    /* grid-column-end: 6; */
     margin-left: -154px;
-
-    /* grid-row-start: 2;
-    grid-row-end: 3; */
   }
   .activ-box3 {
     grid-column-start: 2;
     grid-column-end: 4;
-
-    /* grid-row-start: 2;
-    grid-row-end: 5; */
   }
 }
+
+/* Swiper */
+
 .swiper-pagination {
   position: static;
 }
@@ -282,7 +274,6 @@ button {
 .swiper-pagination-bullet-active {
   background: var(--prime-dark);
 }
-
 .swiper-button-disabled {
   border-color: gray;
   color: gray;

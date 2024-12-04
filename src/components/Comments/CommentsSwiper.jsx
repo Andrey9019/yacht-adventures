@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 const CommentsSwiper = () => {
   return (
     <Swiper
-      className="mx-auto" // Центрування слайдера
+      className="mx-auto"
       modules={[Pagination, Navigation]}
       spaceBetween={16}
       slidesPerView={1}

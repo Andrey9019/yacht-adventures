@@ -3,7 +3,7 @@ import { FaSailboat } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="footer container flex flex-col mx-auto relative">
+    <footer className="footer  container flex flex-col mx-auto relative">
       <div className="absolute top-0 left-4 right-4 h-[1px] bg-[#f6f5ef33]">
         {" "}
       </div>

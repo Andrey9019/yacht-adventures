@@ -14,10 +14,7 @@ const Rent = () => {
               srcSet="images/hero-card/rentForm@1x.jpg 1x, images/hero-card/rentForm@2x.webp 2x"
               alt="Yacht's view"
               className="h-[187px] md:w-[271px] xl:w-[282px] xl:h-[191px] scale-x-[-1] object-cover rounded-3xl"
-              loading="lazy" // відкладене завантаження
-              decoding="async" // асинхронне декодування
-              width="259" // встановлення ширини для покращення продуктивності
-              // height="250" // встановлення висоти
+              loading="lazy"
             />
           </div>
           <Form />
