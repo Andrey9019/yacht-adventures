@@ -25,7 +25,7 @@ const ListYacht = () => {
         }}
       >
         {allYachts.map((yacht, index) => (
-          <SwiperSlide key={index} className="flex justify-center">
+          <SwiperSlide key={index} className="!flex justify-center">
             <div className="bg-[--dark-blue-2] p-[18px] pb-6 rounded-3xl mb-6 md:mb-8 w-[335px] h-[469px] md:w-[344px] md:h-[508px] xl:w-[354px]">
               <img
                 src={yacht.imageYacht.mobileSrc}
