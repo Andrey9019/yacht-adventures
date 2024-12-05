@@ -15,6 +15,7 @@ const Rent = () => {
               alt="Yacht's view"
               className="h-[187px] md:w-[271px] xl:w-[282px] xl:h-[191px] scale-x-[-1] object-cover rounded-3xl"
               loading="lazy"
+              width="259"
             />
           </div>
           <Form />

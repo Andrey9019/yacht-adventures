@@ -26,7 +26,7 @@ const CommentsSwiper = () => {
       }}
     >
       {allComments.map((comment, index) => (
-        <SwiperSlide key={index} className="flex justify-center">
+        <SwiperSlide key={index} className="!flex justify-center">
           <div className="w-full max-w-[384px] flex flex-col p-6 mb-[14px] md:px-8 md:mb-8 xl:p-8 items-center rounded-3xl bg-[--dark-blue-2]">
             <img
               src={comment.imageClient.mobileSrc}
