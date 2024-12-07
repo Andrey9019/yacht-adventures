@@ -1,12 +1,15 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
+import { useTranslation } from "react-i18next";
 import allComments from "../data/commentsData";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 const CommentsSwiper = () => {
+  const { i18n } = useTranslation();
+
   return (
     <Swiper
       className="mx-auto"
@@ -31,12 +34,19 @@ const CommentsSwiper = () => {
             <img
               src={comment.imageClient.mobileSrc}
               srcSet={`${comment.imageClient.mobileSrc} 500w,${comment.imageClient.desktopSrc} 1000w`}
-              alt={comment.nameClient}
+              alt={
+                comment.translations[i18n.language]?.nameClient ||
+                comment.translations.en.nameClient
+              }
               className="w-12 h-12 mb-[18px] object-cover rounded-full"
             />
-            <p className="mb-2">{comment.nameClient}</p>
+            <p className="mb-2">
+              {comment.translations[i18n.language]?.nameClient ||
+                comment.translations.en.nameClient}
+            </p>
             <p className="text-xs font-normal text-center text-[#f6f5ef80]">
-              {comment.comment}
+              {comment.translations[i18n.language]?.comment ||
+                comment.translations.en.comment}
             </p>
           </div>
         </SwiperSlide>

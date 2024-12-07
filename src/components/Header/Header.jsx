@@ -2,7 +2,12 @@ import { useState, useEffect } from "react";
 import { FaSailboat } from "react-icons/fa6";
 import MobileHeader from "./MobileHeader";
 
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../ui/LanguageSwitcher";
+
 const Header = () => {
+  const { t } = useTranslation();
+
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -22,31 +27,34 @@ const Header = () => {
       <div className="flex items-center gap-2">
         <FaSailboat className="w-[18px] md:w-6" />
         <span className="text-sm font-medium uppercase md:font-bold md:text-xl">
-          Yacht Adventures
+          {t("header.logo_nav")}
         </span>
       </div>
 
       {!isMobile ? (
-        <nav className="hidden md:flex text-sm gap-6">
-          <a
-            href="#About"
-            className="hover:text-[--prime-dark] font-bold uppercase"
-          >
-            About
-          </a>
-          <a
-            href="#Yachts"
-            className="hover:text-[--prime-dark] font-bold uppercase"
-          >
-            Yachts
-          </a>
-          <a
-            href="#Reviews"
-            className="hover:text-[--prime-dark] font-bold uppercase"
-          >
-            Reviews
-          </a>
-        </nav>
+        <>
+          <LanguageSwitcher />
+          <nav className="hidden md:flex text-sm gap-6">
+            <a
+              href="#About"
+              className="hover:text-[--prime-dark] font-bold uppercase"
+            >
+              {t("header.about_nav")}
+            </a>
+            <a
+              href="#Yachts"
+              className="hover:text-[--prime-dark] font-bold uppercase"
+            >
+              {t("header.yachts_nav")}
+            </a>
+            <a
+              href="#Reviews"
+              className="hover:text-[--prime-dark] font-bold uppercase"
+            >
+              {t("header.reviews_nav")}
+            </a>
+          </nav>
+        </>
       ) : (
         <MobileHeader />
       )}

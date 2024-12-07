@@ -1,4 +1,9 @@
+import { useTranslation } from "react-i18next";
+
 const Аctivitys = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = useTranslation();
+
   return (
     <section className="flex mx-auto">
       <div className="container custom-container">
@@ -14,7 +19,7 @@ const Аctivitys = () => {
               width="335px"
             />
             <div className="absolute bottom-6 left-6 inline-flex px-7 py-[14px] text-sm md:text-lg text-[--dark-blue] bg-[--white] font-bold rounded-full">
-              Diving
+              {t("activitys.activitys_1")}
             </div>
           </li>
 
@@ -29,7 +34,7 @@ const Аctivitys = () => {
               width="335"
             />
             <div className="absolute bottom-6 left-6 inline-flex px-7 py-[14px] text-sm md:text-lg text-[--dark-blue] bg-[--white] font-bold rounded-full">
-              Fishing
+              {t("activitys.activitys_2")}
             </div>
           </li>
 
@@ -44,7 +49,7 @@ const Аctivitys = () => {
               width="335"
             />
             <div className="absolute bottom-6 left-6 inline-flex px-7 py-[14px] text-sm md:text-lg text-[--dark-blue] bg-[--white] font-bold rounded-full">
-              Sunbathing
+              {t("activitys.activitys_3")}
             </div>
           </li>
         </ul>

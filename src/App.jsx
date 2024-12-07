@@ -1,10 +1,10 @@
+import { Suspense } from "react";
+
 import Header from "./components/Header/Header";
 import MainPage from "./components/MainPage";
 import Footer from "./components/Footer/Footer";
 
-import "./index.css";
-
-const App = () => {
+function App() {
   return (
     <>
       <Header />
@@ -12,6 +12,12 @@ const App = () => {
       <Footer />
     </>
   );
-};
+}
 
-export default App;
+export default function WrappedApp() {
+  return (
+    <Suspense fallback={<span className="loader"></span>}>
+      <App />
+    </Suspense>
+  );
+}

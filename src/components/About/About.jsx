@@ -1,6 +1,10 @@
 import Button from "../ui/Button";
 
+import { Trans, useTranslation } from "react-i18next";
+
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="About"
@@ -9,29 +13,24 @@ const About = () => {
       <div className="container about-container">
         <div className="grid gap-[14px] text-sm xl:text-base mb-10 md:mb-16 grid-cols-2 md:grid-cols-4 xl:grid-cols-6">
           <p className="col-span-2 row-start-1 md:col-span-3 md:row-start-1 xl:col-span-3 xl:row-start-1 text-2xl md:text-[32px] mb-10">
-            <span className="italic text-[--prime-phrase]">
-              Yacht Adventures{" "}
-            </span>
-            fleet is here to take you on the ultimate adventure. Each yacht is
-            hand-picked for its comfort, style, and performance.
+            <Trans
+              i18nKey="about.title_1"
+              components={{
+                1: <span className="italic text-[--prime-phrase]" />,
+              }}
+            />
           </p>
           <p className="col-span-1 row-start-2 md:col-span-1 md:col-start-3 md:row-start-2 xl:col-start-5 xl:row-start-1">
-            From spacious decks to state-of-the-art technology, our yachts are
-            designed to provide the perfect blend of luxury and functionality.
-            Take a look at our selection below and choose the yacht that matches
-            your needs and preferences.
+            {t("about.text_1")}
           </p>
           <p className="col-span-1 row-start-2 md:col-span-1 md:col-start-4 md:row-start-2 xl:col-start-6 xl:row-start-1">
-            No matter which yacht you choose, our experienced crew will ensure
-            that your journey is smooth and enjoyable. Book now and get ready
-            for an unforgettable adventure on the high seas.
+            {t("about.text_2")}
           </p>
         </div>
 
         <div className="relative">
           <div className="about-wrap">
             <div className="about-box1 xl:w-[533px]">
-              {" "}
               <img
                 src="images/about/about-1@1x.jpg"
                 srcSet="images/about/about-1@1x.jpg 1x, images/about/about-1@2x.webp 2x"
@@ -61,10 +60,10 @@ const About = () => {
           </div>
           <div className="absolute -bottom-24 md:-bottom-64 md:px-8 xl:-bottom-96 xl:px-24">
             <p className="mb-10 md:mb-16 text-[36px] md:text-[70px] xl:text-[100px] xl:font-medium">
-              Choose your dream yacht and sail away into the sunset
+              {t("about.title_2")}
             </p>
             <Button
-              text="Yacht rental"
+              text={t("about.button")}
               onClick={() => {
                 document
                   .getElementById("Rent")

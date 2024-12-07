@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import Button from "../ui/Button";
 import { FaArrowRight } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 const initialValues = {
   fullName: "",
@@ -33,6 +34,8 @@ const FormikForm = () => {
 
   const closeModal = () => setShowModal(false);
 
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col w-full max-w-[378px]">
       <Formik
@@ -44,7 +47,7 @@ const FormikForm = () => {
           <Form>
             <div className="flex flex-col">
               <div className="flex flex-row">
-                <label className="text-sm md:text-base">Full Name</label>
+                <label className="text-sm md:text-base">{t("rent.name")}</label>
                 <ErrorMessage
                   name="fullName"
                   component="div"
@@ -61,7 +64,9 @@ const FormikForm = () => {
 
             <div className="flex flex-col">
               <div className="flex flex-row">
-                <label className="text-sm md:text-base">Email</label>
+                <label className="text-sm md:text-base">
+                  {t("rent.email")}
+                </label>
                 <ErrorMessage
                   name="email"
                   component="div"
@@ -77,7 +82,9 @@ const FormikForm = () => {
             </div>
             <div className="flex flex-col">
               <div className="flex flex-row">
-                <label className="text-sm md:text-base">Phone Number</label>
+                <label className="text-sm md:text-base">
+                  {t("rent.phone")}
+                </label>
                 <ErrorMessage
                   name="phone"
                   component="div"
@@ -93,17 +100,19 @@ const FormikForm = () => {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-sm md:text-base">Comment</label>
+              <label className="text-sm md:text-base">
+                {t("rent.comment")}
+              </label>
               <Field
                 as="textarea"
                 name="comment"
                 className="bg-transparent border-b border-white outline-none p-[2px] mb-6 md:mb-8 h-14 focus:border-gray-500"
-                placeholder="Wishes for the order"
+                placeholder={t("rent.comment_placeholder")}
               />
             </div>
 
             <Button
-              text="Send"
+              text={t("rent.button")}
               type="submit"
               icon={<FaArrowRight />}
               onClick={() => {}}
@@ -132,14 +141,9 @@ const FormikForm = () => {
             />
 
             <h2 className="text-2xl md:text-[32px] font-medium mb-[14px] md:mb-4">
-              Thank you
+              {t("rent.thank_you")}
             </h2>
-            <p className="text-sm md:text-base">
-              Thank you for choosing Yacht Adventures, your booking details have
-              been received and our team will be in touch shortly to confirm
-              your reservation and provide any additional information or
-              assistance you may need.
-            </p>
+            <p className="text-sm md:text-base">{t("rent.text")} </p>
           </div>
         </div>
       )}

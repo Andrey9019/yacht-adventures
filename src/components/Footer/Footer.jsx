@@ -1,7 +1,11 @@
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaSailboat } from "react-icons/fa6";
 
+import { useTranslation } from "react-i18next";
+
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer  container flex flex-col mx-auto relative">
       <div className="absolute top-0 left-4 right-4 h-[1px] bg-[#f6f5ef33]">
@@ -22,24 +26,26 @@ const Footer = () => {
               href="#About"
               className="w-max hover:text-[--prime-dark] font-bold uppercase "
             >
-              About
+              {t("header.about_nav")}
             </a>
             <a
               href="#Yachts"
               className="w-max hover:text-[--prime-dark] font-bold  uppercase"
             >
-              Yachts
+              {t("header.yachts_nav")}
             </a>
             <a
               href="#Reviews"
               className="w-max hover:text-[--prime-dark] font-bold  uppercase"
             >
-              Reviews
+              {t("header.reviews_nav")}
             </a>
           </nav>
 
-          <div className="">
-            <p className="text-sm font-bold uppercase mb-4">We in social</p>
+          <div>
+            <p className="text-sm font-bold uppercase mb-4">
+              {t("footer.social")}
+            </p>
             <ul className="flex gap-[14px] md:gap-4">
               <li className="w-8 h-8 md:w-10 md:h-10 border rounded-lg flex items-center justify-center hover:text-[--prime-dark] hover:border-[--prime-dark]">
                 <a href="/">
@@ -62,9 +68,9 @@ const Footer = () => {
       </div>
 
       <div className="flex justify-center gap-[14px]">
-        <p>2024. Yacht Adventures</p>
+        <p>{t("footer.2024_Yacht_Adventures")}</p>
         <a href="/" className="hover:text-[--prime-dark]">
-          <p>Privacy Police</p>
+          <p>{t("footer.Privacy_Police")}</p>
         </a>
       </div>
     </footer>
