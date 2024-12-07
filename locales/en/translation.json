@@ -1,0 +1,62 @@
+{
+
+"header":{
+    "logo_nav":"Yacht Adventures",
+    "about_nav":"About",
+    "yachts_nav":"Yachts",
+    "reviews_nav":"Reviews"
+},
+
+"hero":{
+    "title":"Explore the High Seas with Our Luxury Yacht Rentals",
+    "text":"Experience the freedom and luxury of yachting on the open seas. Choose from our top-of-the-line yachts and embark on an unforgettable journey surrounded by breathtaking views and state-of-the-art amenities.",
+    "button":"Yacht rental"
+},
+
+"about":{
+    "title_1":"<1>Yacht Adventures</1> fleet is here to take you on the ultimate adventure. Each yacht is hand-picked for its comfort, style, and performance.",
+    "title_2":"Choose your dream yacht and sail away into the sunset",
+    "text_1":"From spacious decks to state-of-the-art technology, our yachts are designed to provide the perfect blend of luxury and functionality. Take a look at our selection below and choose the yacht that matches your needs and preferences.",
+    "text_2":"No matter which yacht you choose, our experienced crew will ensure that your journey is smooth and enjoyable. Book now and get ready for an unforgettable adventure on the high seas.",
+    "button":"Yacht rental"
+},
+
+"activitys":{
+    "activitys_1":"Diving",
+    "activitys_2":"Fishing",
+    "activitys_3":"Sunbathing"
+},
+
+"yacht":{
+    "LENGTH":"LENGTH",
+    "BUILDER":"BUILDER",
+    "SHIPYARD":"SHIPYARD",
+    "BUILT":"BUILT",
+    "GUESTS":"GUESTS",
+    "PRICE":"PRICE"
+},
+
+"rent":{
+    "title":"Rent a yacht now",
+    "name":"Full Name",
+    "email":"Email",
+    "phone":"Phone Number",
+    "comment":"Comment",
+    "comment_placeholder":"Wishes for the order",
+    "button":"Send",
+    "thank_you":"Thank you",
+    "text":" Thank you for choosing Yacht Adventures, your booking details have been received and our team will be in touch shortly to confirm your reservation and provide any additional information or assistance you may need."
+},
+
+"commentars":{
+    "title":"<1> Yacht Adventures</1> take pride in providing the best possible service and experience to our customers",  
+    "text":"Our customers have enjoyed unforgettable moments on our yachts. Don`t just take our word for it - read on to find out what they have to say about their journey with us."
+},
+
+"footer":{
+    "social":"We in social",
+    "2024_Yacht_Adventures":"2024. Yacht Adventures",
+    "Privacy_Police":"Privacy Police"
+}
+
+}
