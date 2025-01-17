@@ -6,13 +6,13 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="hero-bg-img container flex mx-auto">
+    <section className="hero-bg-img container flex items-center mx-auto">
       <div className=" hero-container xl:flex flex-row-reverse">
-        <div className=" flex flex-col items-center text-center">
-          <h1 className="text-3xl md:text-6xl font-medium tracking-[-0.6px] md:tracking-[-0.64px] xl:tracking-[-1.7px] mb-6 md:mb-4">
+        <div className="flex flex-col items-center text-center max-w-[900px]">
+          <h1 className="text-3xl md:text-6xl font-medium tracking-[-0.6px] md:tracking-[-0.64px] xl:tracking-[-1.7px] mb-6 md:mb-4  ">
             {t("hero.title")}
           </h1>
-          <p className="text-sm md:text-base font-normal tracking-[0.28px] max-w-[541px] mb-9 md:mb-8">
+          <p className="text-sm md:text-base font-normal tracking-[0.28px] max-w-[560px] mb-9 md:mb-8">
             {t("hero.text")}
           </p>
           <Button

@@ -106,7 +106,7 @@ const FormikForm = () => {
               <Field
                 as="textarea"
                 name="comment"
-                className="bg-transparent border-b border-white outline-none p-[2px] mb-6 md:mb-8 h-14 focus:border-gray-500"
+                className="bg-transparent border-b border-white outline-none p-[2px] mb-6 md:mb-8 h-14 focus:border-gray-500 min-h-12 max-h-28"
                 placeholder={t("rent.comment_placeholder")}
               />
             </div>
