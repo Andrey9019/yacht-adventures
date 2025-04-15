@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 
+import { motion } from "framer-motion";
+
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
 
@@ -9,7 +11,13 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="flex gap-2">
-      <button onClick={() => changeLanguage("en")} className="">
+      <motion.button
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        onClick={() => changeLanguage("en")}
+        className=""
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"
@@ -130,9 +138,15 @@ const LanguageSwitcher = () => {
             d="M13.539 14.744L14.13 14.315 13.399 14.315 13.173 13.619 12.947 14.315 12.216 14.315 12.808 14.744 12.582 15.44 13.173 15.01 13.765 15.44 13.539 14.744z"
           ></path>
         </svg>
-      </button>
+      </motion.button>
 
-      <button onClick={() => changeLanguage("uk")} className="">
+      <motion.button
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        onClick={() => changeLanguage("uk")}
+        className=""
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"
@@ -157,7 +171,7 @@ const LanguageSwitcher = () => {
             opacity=".2"
           ></path>
         </svg>
-      </button>
+      </motion.button>
     </div>
   );
 };

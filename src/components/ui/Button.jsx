@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
 const Button = ({
   text,
@@ -12,7 +13,9 @@ const Button = ({
   onClick,
 }) => {
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.8 }}
       onClick={onClick}
       className={`flex items-center px-7 py-[14px] font-bold text-${textColor} border-2 rounded-full cursor-pointer transition-all duration-300 
       text-sm md:text-lg w-max`}
@@ -33,7 +36,7 @@ const Button = ({
     >
       {text}
       {icon && <span style={{ marginLeft: "16px" }}>{icon}</span>}
-    </button>
+    </motion.button>
   );
 };
 

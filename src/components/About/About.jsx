@@ -1,8 +1,9 @@
 import Button from "../ui/Button";
-
 import { Trans, useTranslation } from "react-i18next";
 
-const About = () => {
+import { motion } from "framer-motion";
+
+export default function About() {
   const { t } = useTranslation();
 
   return (
@@ -12,20 +13,35 @@ const About = () => {
     >
       <div className="container about-container">
         <div className="grid gap-[14px] text-sm xl:text-base mb-10 md:mb-16 grid-cols-2 md:grid-cols-4 xl:grid-cols-6">
-          <p className="col-span-2 row-start-1 md:col-span-3 md:row-start-1 xl:col-span-3 xl:row-start-1 text-2xl md:text-[32px] mb-10">
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, ease: "backIn" }}
+            className="col-span-2 row-start-1 md:col-span-3 md:row-start-1 xl:col-span-3 xl:row-start-1 text-2xl md:text-[32px] mb-10"
+          >
             <Trans
               i18nKey="about.title_1"
               components={{
                 1: <span className="italic text-[--prime-phrase]" />,
               }}
             />
-          </p>
-          <p className="col-span-1 row-start-2 md:col-span-1 md:col-start-3 md:row-start-2 xl:col-start-5 xl:row-start-1">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2, ease: "backIn" }}
+            className="col-span-1 row-start-2 md:col-span-1 md:col-start-3 md:row-start-2 xl:col-start-5 xl:row-start-1"
+          >
             {t("about.text_1")}
-          </p>
-          <p className="col-span-1 row-start-2 md:col-span-1 md:col-start-4 md:row-start-2 xl:col-start-6 xl:row-start-1">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 70 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2.5, ease: "backIn" }}
+            className="col-span-1 row-start-2 md:col-span-1 md:col-start-4 md:row-start-2 xl:col-start-6 xl:row-start-1"
+          >
             {t("about.text_2")}
-          </p>
+          </motion.p>
         </div>
 
         <div className="relative">
@@ -75,6 +91,4 @@ const About = () => {
       </div>
     </section>
   );
-};
-
-export default About;
+}
