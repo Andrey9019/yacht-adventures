@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 
 import allYachts from "../data/yachtsData";
 
+import { motion } from "framer-motion";
+
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const ListYacht = () => {
@@ -34,8 +36,11 @@ const ListYacht = () => {
             yacht.translations[i18n.language] || yacht.translations.en;
 
           return (
-            <SwiperSlide key={index} className="!flex justify-center">
-              <div className="bg-[--dark-blue-2] p-[18px] pb-6 rounded-3xl mb-6 md:mb-8 w-[335px] h-[469px] md:w-[344px] md:h-[508px] xl:w-[354px]">
+            <SwiperSlide key={index} className="!flex justify-center pt-7">
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                className="bg-[--dark-blue-2] p-[18px] pb-6 rounded-3xl mb-6 md:mb-8 w-[335px] h-[469px] md:w-[344px] md:h-[508px] xl:w-[354px]"
+              >
                 <img
                   src={yacht.imageYacht.mobileSrc}
                   srcSet={`${yacht.imageYacht.mobileSrc} 500w, ${yacht.imageYacht.desktopSrc} 1000w`}
@@ -44,7 +49,7 @@ const ListYacht = () => {
                   loading="lazy"
                   decoding="async"
                 />
-                <div className="flex justify-between mb-6 md:mb-8 items-center">
+                <div className="flex items-center justify-between mb-6 md:mb-8">
                   <h3 className="text-base font-bold w-[177px] uppercase truncate overflow-hidden text-ellipsis whitespace-nowrap">
                     {translation.nameYacht}
                   </h3>
@@ -92,7 +97,7 @@ const ListYacht = () => {
                     )}
                   </tbody>
                 </table>
-              </div>
+              </motion.div>
             </SwiperSlide>
           );
         })}

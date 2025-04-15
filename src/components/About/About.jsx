@@ -47,7 +47,9 @@ export default function About() {
         <div className="relative">
           <div className="about-wrap">
             <div className="about-box1 xl:w-[533px]">
-              <img
+              <motion.img
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.8 }}
                 src="images/about/about-1@1x.jpg"
                 srcSet="images/about/about-1@1x.jpg 1x, images/about/about-1@2x.webp 2x"
                 alt="Yacht's view"
@@ -56,7 +58,9 @@ export default function About() {
               />
             </div>
             <div className=" about-box2 md:w-[308px]">
-              <img
+              <motion.img
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.8 }}
                 src="images/about/about-2@1x.jpg"
                 srcSet="images/about/about-2@1x.jpg 1x, images/about/about-2@2x.webp 2x"
                 alt="Yacht's view"
@@ -65,7 +69,7 @@ export default function About() {
               />
             </div>
             <div className="image-container about-box3 w-[260px]">
-              <img
+              <motion.img
                 src="images/about/about-3@1x.jpg"
                 srcSet="images/about/about-3@1x.jpg 1x, images/about/about-3@2x.webp 2x"
                 alt="Yacht's view"

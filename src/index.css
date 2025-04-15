@@ -85,10 +85,30 @@ button {
   background-size: cover;
   background-position: center;
   margin-top: -80px;
+  background-color: #fff;
 }
+
 @media (min-width: 768px) {
   .hero-bg-img {
     margin-top: -100px;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(-45deg, #11131f, #1a1f2e, #30445d, #11131f);
+  background-size: 400% 400%;
+  animation: gradientFlow 10s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
